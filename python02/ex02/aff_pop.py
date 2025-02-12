@@ -36,6 +36,5 @@ def aff_pop(path: str):
         lambda x, _: f"{int(x / 1e6)}M"  # Convert 20,000,000 to "20M"
     ))
 
-    plt.legend()
     plt.show()
     return
