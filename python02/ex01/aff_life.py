@@ -11,7 +11,7 @@ def aff_life(path: str):
 
     df.set_index("country", inplace=True)
     data = df.loc["France"]
-    data.index = data.index.astype(int)  # Convert index to integers
+    data.index = data.index.astype(int)
 
     plt.figure(figsize=(10, 5))
     plt.plot(data.index, data.values)
@@ -19,7 +19,6 @@ def aff_life(path: str):
     plt.ylabel("Life expectancy")
     plt.title("France life expectancy projections")
 
-    # Set x-axis major ticks every 40 years
     ax = plt.gca()
     ax.xaxis.set_major_locator(MultipleLocator(40))
 
